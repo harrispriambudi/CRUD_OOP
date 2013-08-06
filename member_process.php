@@ -6,8 +6,8 @@ public $nama;
 public $gender;
 public $usia;
 
-function view(){
-$query = mysql_query("select * from member order by id");
+function view($table){
+$query = mysql_query("select * from $table");
 while($row=mysql_fetch_array($query))
 $data[]=$row;
 return $data;

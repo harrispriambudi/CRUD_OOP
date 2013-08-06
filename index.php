@@ -4,7 +4,7 @@ include 'member_process.php';
 $mp = new member_process();
 $conn = new connection();
 $conn->connectMySQL();
-$arraymember=$mp->view();
+$arraymember=$mp->view('member');
 /////
 if(isset($_GET['action'])){
 if ($_GET['action'] == 'delete'){
@@ -14,6 +14,7 @@ $mp->delete($id);
 }
 
 ?>
+<title>Member</title>
 <a href='add.php'>ADD NEW MEMBER</a>
 <table border='1'>
 <tr>

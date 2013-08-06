@@ -42,34 +42,39 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')
     <form action="add.php" method="post" enctype="multipart/form-data">
 
         <div>
-        	<label for="nama">NAMA</label>	:
+        	<label for="nama">NAMA		:</label>
             <?php if(isset($errors['nama'])): ?>
-            <label for "nama"><p class="error"><font color="red">Isi nama dengan benar</font></p></label>
+            <a class="error"><font color="red">Isi nama dengan benar</font></a>
             <?php endif; ?>
+			<br>
             <input id="nama" name="nama" value="<?php echo $nama; ?>"/>
         </div>
 
-        <div>        	<label for="usia">USIA</label>	:
-            <?php if(isset($errors['usia'])): ?>
-            <label for "usia"><p class="error"><font color="red">Isi usia dengan benar</font></p></label>
+        <div><label for="usia">USIA		:</label>
+		<?php if(isset($errors['usia'])): ?>
+            <a class="error"><font color="red">Isi usia dengan benar</font></a>
             <?php endif; ?>
+			<br>
             <input id="usia" name="usia" value="<?php echo $usia; ?>"/>
         </div>
 
         <div>
-        	<label for="gender">GENDER</label>	:
+        	<label for="gender">GENDER		:</label>
             <?php if(isset($errors['gender'])): ?>
-            <label for "gender"><p class="error"><font color="red">Isi gender dengan benar</font></p></label>
+            <a class="error"><font color="red">Isi gender dengan benar</font></a>
             <?php endif; ?>
+			<br>
 			<input id="gender" name="gender" type="radio" value="pria"/>PRIA
 			<input id="gender" name="gender" type="radio" value="wanita"/>WANITA
         </div>
 		
         <div>
             <button type="submit">Save</button>
+			</form>
+			<INPUT TYPE="button" value="Cancel" onClick="parent.location='index.php'">
         </div>
 
-    </form>
+    
   </div>
 
 </body>

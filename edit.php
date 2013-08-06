@@ -48,7 +48,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')
 
     <form action="edit.php?id=<?php echo $id; ?>" method="post" enctype="multipart/form-data">
         <div>
-        	<label for="nama">nama</label>
+        	<label for="nama">NAMA	:</label>
             <?php if(isset($errors['nama'])): ?>
             <label for "nama"><p class="error">Isi nama dengan benar</p></label>
             <?php endif; ?>
@@ -56,7 +56,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')
         </div>
 
         <div>
-        	<label for="usia">usia</label>
+        	<label for="usia">USIA	:</label>
             <?php if(isset($errors['usia'])): ?>
             <label for "usia"><p class="error">Isi usia dengan benar</p></label>
             <?php endif; ?>
@@ -64,7 +64,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')
         </div>
 
         <div>
-        	<label for="gender">gender</label>
+        	<label for="gender">GENDER	:</label>
             <?php if(isset($errors['gender'])): ?>
             <label for "gender"><p class="error">Isi gender dengan benar</p></label>
             <?php endif; ?>
@@ -80,6 +80,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')
 		
         <div>
             <button type="submit">Save</button>
+			<INPUT TYPE="button" value="Cancel" onClick="parent.location='index.php'">
         </div>
 
     </form>
